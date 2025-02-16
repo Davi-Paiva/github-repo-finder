@@ -1,8 +1,9 @@
 import {User} from '../types/userTypes'
+import { githubClient } from './auth'
 
 export const getUser = async (username: string): Promise<User | null> => {
     try {
-        return fetch(`https://api.github.com/users/${username}`)
+        return fetch(`https://api.github.com/users/${username}`, githubClient)
             .then((response) => response.json())
             .then((data) => {
                 return {
@@ -24,7 +25,7 @@ export const getUser = async (username: string): Promise<User | null> => {
 
 export const searchUser = async (query: string): Promise<User[] | null> => {
     try {
-        return fetch(`https://api.github.com/search/users?q=${query}`)
+        return fetch(`https://api.github.com/search/users?q=${query}`, githubClient)
             .then((response) => response.json())
             .then((data) => {
                 return data.items.map((item: User) => {

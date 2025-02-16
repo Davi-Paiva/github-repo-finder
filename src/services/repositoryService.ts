@@ -1,8 +1,9 @@
 import { Repository } from '../types/repositoryTypes';
+import { githubClient } from './auth';
 
 export const getUserRepositories = async (username: string, page: number = 1, per_page: number = 10) => {
     try {
-        return fetch(`https://api.github.com/users/${username}/repos?page=${page}&per_page=${per_page}`)
+        return fetch(`https://api.github.com/users/${username}/repos?page=${page}&per_page=${per_page}`, githubClient)
             .then((response) => response.json())
             .then((data) => {
                 return data.map((repository: Repository) => {
