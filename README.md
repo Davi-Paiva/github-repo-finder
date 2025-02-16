@@ -21,7 +21,7 @@ Simple React application that allows you to search for GitHub repositories by us
         - [v] Add searchUser test
     - [v] Add tests for the repository service
         - [v] Add getUserRepositories test
-- [ ] Authenticate API requests -> reached limit of non authenticated requests
+- [v] Authenticate API requests -> reached limit of non authenticated requests
 - [ ] Make a simple UI with a search input and a list of repositories
     - [ ] Add first page -> User search
         - [ ] Add needed components
