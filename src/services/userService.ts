@@ -15,6 +15,9 @@ export const getUser = async (username: string): Promise<User | null> => {
                     name: data.name,
                     email: data.email,
                     public_repos: data.public_repos,
+                    followers: data.followers,
+                    following: data.following,
+                    bio: data.bio,
                 } as User;
             });
     }catch (error){
@@ -24,8 +27,11 @@ export const getUser = async (username: string): Promise<User | null> => {
 }
 
 export const searchUser = async (query: string): Promise<User[] | null> => {
+    if(query.length === 0) {
+        return [];
+    }
     try {
-        return fetch(`https://api.github.com/search/users?q=${query}`, githubClient)
+        return fetch(`https://api.github.com/search/users?q=${query}&per_page=10`, githubClient)
             .then((response) => response.json())
             .then((data) => {
                 return data.items.map((item: User) => {

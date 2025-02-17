@@ -1,8 +1,8 @@
-import { getUserRepositories } from "../services/repositoryService";
+import { getAllUserRepositories } from "../services/repositoryService";
 
-describe("getUserRepositories", () => {
+describe("getAllUserRepositories", () => {
     it("should return a list of repositories", async () => {
-        const repositories = await getUserRepositories("Davi-Paiva");
+        const repositories = await getAllUserRepositories("Davi-Paiva");
         expect(repositories).toBeDefined();
         expect(repositories?.length).toBe(2);
         expect(repositories?.[0].id).toBe(922196510);

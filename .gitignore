@@ -3,6 +3,9 @@
 #env
 .env.local
 
+#test setup
+src/setupTests.ts
+
 # dependencies
 /node_modules
 /.pnp

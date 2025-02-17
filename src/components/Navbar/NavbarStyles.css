@@ -1,0 +1,29 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #F6F8FA;
+    z-index: 1000;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #24292E;
+}
+
+.navbar-icon {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    color: #24292E;
+}

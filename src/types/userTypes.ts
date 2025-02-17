@@ -7,4 +7,7 @@ export interface User{
     name: string;
     email: string;
     public_repos: number;
+    followers: number;
+    following: number;
+    bio: string;
 }
