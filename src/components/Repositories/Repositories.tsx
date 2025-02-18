@@ -57,7 +57,7 @@ export function Repositories({ username }: IRepositoriesProps) {
             <CardsContainer repositories={repositories} languages={languages}/>
 
             <div className="repositories-pagination">
-                <FaArrowLeft className="repositories-pagination-button" onClick={() => {
+                <FaArrowLeft className={`${currentPage === 1 ? "repositories-pagination-button-hidden" : "repositories-pagination-button"}`} onClick={() => {
                     if (currentPage > 1) {
                         setCurrentPage(currentPage - 1);
                     }
@@ -65,7 +65,7 @@ export function Repositories({ username }: IRepositoriesProps) {
 
                 <p className="repositories-pagination-page">{currentPage}</p>
 
-                <FaArrowRight className="repositories-pagination-button" onClick={() => {
+                <FaArrowRight className={`${currentPage >= totalRepositories/10 ? "repositories-pagination-button-hidden" : "repositories-pagination-button"}`} onClick={() => {
                     if (currentPage < totalRepositories/10) {
                         setCurrentPage(currentPage + 1);
                     }}

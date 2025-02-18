@@ -24,16 +24,28 @@
 
 .repositories-pagination {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    width: 100px;
+    margin: 0 auto;
 }
 
 .repositories-pagination-button {
     font-size: 1.5rem;
     cursor: pointer;
+    visibility: visible;
+}
+
+.repositories-pagination-button-hidden {
+    font-size: 1.5rem;
+    color: #666666;
 }
 
 .repositories-pagination-button:active {
     transform: scale(0.9);
+}
+
+.repositories-pagination-page {
+    text-align: center;
+    min-width: 40px;
 }

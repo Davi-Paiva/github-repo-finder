@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Select from 'react-select';
 import { colors } from "../../utils/colors";
 import "./RepositorySearchStyles.css";
+import { SelectorStyles } from "./SelectorStyles";
 
 interface IRepositoriesProps {
     languages: string[];
@@ -35,30 +36,7 @@ export function RepositorySearch({ languages, handleSearch }: IRepositoriesProps
                         <span style={{ marginLeft: '8px' }}>{label}</span>
                     </div>
                 )}
-                styles={{
-                    control: (base) => ({
-                        ...base,
-                        color: '#666666',
-                        fontSize: '0.8rem',
-                        borderRadius: '0.2rem',
-                        border: '1px solid #e1e4e8',
-                        width: '100%',
-                    }),
-                    indicatorSeparator: (base) => ({
-                        ...base,
-                        display: 'none',
-                    }),
-                    menu: (base) => ({
-                        ...base,
-                        fontSize: '0.8rem',
-                        marginTop: '0',
-                        borderRadius: '0',
-                    }),
-                    input: (base) => ({
-                        ...base,
-                        color: 'transparent',
-                    }),
-                }}
+                styles={SelectorStyles}
                     onChange={(selectedOption) => {
                         setLanguage(selectedOption?.value || "");
                     }}
