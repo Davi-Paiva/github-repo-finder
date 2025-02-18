@@ -21,11 +21,13 @@ export const SelectorStyles = {
         ...base,
         color: 'transparent',
     }),
-    option: (base: any) => ({
+    option: (base: any, { isSelected }: any) => ({
         ...base,
-        backgroundColor: 'white',
+        color: '#000',
+        backgroundColor: isSelected ? '#f0f0f0' : 'white',
         '&:hover': {
             backgroundColor: '#f0f0f0',
         },
+        
     }),
 };
