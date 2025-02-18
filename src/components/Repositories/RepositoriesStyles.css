@@ -22,29 +22,6 @@
     margin-bottom: 1rem;
 }
 
-.repo-search-input {
-    padding: 0.7rem;
-    width: 100%;
-    border: 1px solid #e1e4e8;
-    border-radius: 0.2rem;
-}
-
-.repo-search-container {
-    display: flex;
-    width: 100%;
-    gap: 2.5rem;
-}
-
-.repo-search-input-container {
-    margin: 0;
-    width: 70%;
-}
-
-.repo-language-select-container {
-    margin: 0;
-    width: 30%;
-}
-
 .repositories-pagination {
     display: flex;
     justify-content: center;

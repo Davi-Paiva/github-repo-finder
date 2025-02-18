@@ -1,6 +1,11 @@
 import {User} from '../types/userTypes'
 import { githubClient } from './auth'
 
+/**
+ * Get a user by username
+ * @param {string} username - The username of the user to get
+ * @returns {Promise<User | null>} A promise that resolves to a user or null if the user is not found
+ */
 export const getUser = async (username: string): Promise<User | null> => {
     try {
         return fetch(`https://api.github.com/users/${username}`, githubClient)
@@ -26,6 +31,11 @@ export const getUser = async (username: string): Promise<User | null> => {
     }
 }
 
+/**
+ * Search for a user by query
+ * @param {string} query - The query to search for
+ * @returns {Promise<User[] | null>} A promise that resolves to an array of users or null if the user is not found
+ */
 export const searchUser = async (query: string): Promise<User[] | null> => {
     if(query.length === 0) {
         return [];

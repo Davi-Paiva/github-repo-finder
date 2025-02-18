@@ -26,6 +26,8 @@
     font-weight: 500;
     color: #666666;
     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .repository-card-language {
@@ -36,7 +38,7 @@
     font-weight: 500;
     color: white;
     width: fit-content;
-    border-radius: 1rem;
+    border-radius: 1rem;  
 }
 
 .repository-card-button {
