@@ -32,7 +32,8 @@ Before running the application, ensure you have Yarn installed on your system. I
 
 1. Clone the repository
 2. Run `yarn install` to install the dependencies
-3. Run `yarn start` to start the application
+3. Create a .env.local file and introduce your GitHub API key like in .env.example
+4. Run `yarn start` to start the application
 
 ## **Running the tests**
 
